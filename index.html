@@ -271,7 +271,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/19/NetEzInterview2017/" itemprop="url">NetEasy 2017 Interview Test</a></h1>
+                <a class="post-title-link" href="/2017/09/19/NetEzInterview2017/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -293,39 +293,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Interview-Test/" itemprop="url" rel="index">
-                    <span itemprop="name">Interview Test</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Interview-Test/Java-programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Java programming</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -356,14 +323,69 @@
       
         
           
-            <h2 id="Programming-practice"><a href="#Programming-practice" class="headerlink" title="Programming practice"></a>Programming practice</h2><ul>
+            <p>— # uselss<br>title: NetEasy 2017 Interview Test<br>categories:</p>
+<ul>
+<li>Interview Test</li>
+<li>Java programming<br>tags:</li>
+<li>NetEasy</li>
+<li>Java</li>
+<li>Interview</li>
+</ul>
+<hr>
+<h2 id="Programming-practice"><a href="#Programming-practice" class="headerlink" title="Programming practice"></a>Programming practice</h2><ul>
 <li>Understand the question</li>
 <li>Backward thinking</li>
 </ul>
 <blockquote>
 <p>The question is about integers calculation. Use commend line to control input and output.<br>The initial number is “x” and it has 2 methods to calculate in this system getting result “y”. One is y = 2<em>x + 1; The other is y = 2</em>x + 2; If the system gives a out number y, please calculate the initial number x.</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		ArrayList&lt;Integer&gt; aryNo = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</div><div class="line">		<span class="keyword">int</span> n = sc.nextInt();</div><div class="line">		<span class="keyword">int</span> nNew, sz = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;<span class="comment">// n is a even number</span></div><div class="line">			nNew = (n - <span class="number">2</span>) / <span class="number">2</span>;</div><div class="line">			aryNo.add(<span class="number">2</span>);</div><div class="line">			<span class="keyword">for</span> (; nNew &gt; <span class="number">0</span>;) &#123;</div><div class="line">				<span class="comment">// the last time using No.1</span></div><div class="line">				<span class="keyword">if</span> (nNew % <span class="number">2</span> == <span class="number">0</span>) &#123;<span class="comment">// even</span></div><div class="line">					aryNo.add(<span class="number">2</span>);</div><div class="line">					nNew = (nNew - <span class="number">2</span>) / <span class="number">2</span>;</div><div class="line">				&#125; <span class="keyword">else</span> &#123;</div><div class="line">					aryNo.add(<span class="number">1</span>);</div><div class="line">					nNew = (nNew - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			sz = aryNo.size();</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = sz - <span class="number">1</span>; y &gt;= <span class="number">0</span>; y--) &#123;</div><div class="line">				System.out.print(aryNo.get(y));</div><div class="line">			&#125;</div><div class="line">		&#125; <span class="keyword">else</span> &#123;<span class="comment">// n is a odd number</span></div><div class="line">			nNew = (n - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">			aryNo.add(<span class="number">1</span>);<span class="comment">// the last time using No.1</span></div><div class="line">			<span class="keyword">for</span> (; nNew &gt; <span class="number">0</span>;) &#123;</div><div class="line">				<span class="keyword">if</span> (nNew % <span class="number">2</span> == <span class="number">0</span>) &#123;<span class="comment">// even</span></div><div class="line">					aryNo.add(<span class="number">2</span>);</div><div class="line">					nNew = (nNew - <span class="number">2</span>) / <span class="number">2</span>;</div><div class="line">				&#125; <span class="keyword">else</span> &#123;</div><div class="line">					aryNo.add(<span class="number">1</span>);</div><div class="line">					nNew = (nNew - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			sz = aryNo.size();</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = sz - <span class="number">1</span>; y &gt;= <span class="number">0</span>; y--) &#123;</div><div class="line">				System.out.print(aryNo.get(y));</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>import java.util.Scanner;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList&lt;Integer&gt; aryNo = new ArrayList&lt;Integer&gt;();
+        int n = sc.nextInt();
+        int nNew, sz = 0;
+        if (n % 2 == 0) {// n is a even number
+            nNew = (n - 2) / 2;
+            aryNo.add(2);
+            for (; nNew &gt; 0;) {
+                // the last time using No.1
+                if (nNew % 2 == 0) {// even
+                    aryNo.add(2);
+                    nNew = (nNew - 2) / 2;
+                } else {
+                    aryNo.add(1);
+                    nNew = (nNew - 1) / 2;
+                }
+            }
+            sz = aryNo.size();
+            for (int y = sz - 1; y &gt;= 0; y--) {
+                System.out.print(aryNo.get(y));
+            }
+        } else {// n is a odd number
+            nNew = (n - 1) / 2;
+            aryNo.add(1);// the last time using No.1
+            for (; nNew &gt; 0;) {
+                if (nNew % 2 == 0) {// even
+                    aryNo.add(2);
+                    nNew = (nNew - 2) / 2;
+                } else {
+                    aryNo.add(1);
+                    nNew = (nNew - 1) / 2;
+                }
+            }
+            sz = aryNo.size();
+            for (int y = sz - 1; y &gt;= 0; y--) {
+                System.out.print(aryNo.get(y));
+            }
+        }
+        sc.close();
+    }
+}
+</code></pre>
           
         
       
@@ -606,7 +628,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -617,7 +639,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
